@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html lang="en-US" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en-US" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en-US" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en-US" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]> <html lang="en-US" class="no-js"> <![endif]-->
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	  <script src="https://html5shim.googlecode.com/svn/trunk/html5.js">
+	  </script>
+	<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge"><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1123.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="shortcut icon" href="https://courses.lumenlearning.com/waymakercollegealgebra/wp-content/themes/bombadil/favicon.ico" />
+<title>Identify Functions Using Graphs | College Algebra</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://courses.lumenlearning.com/waymakercollegealgebra/xmlrpc.php" />
+
+<link rel='dns-prefetch' href='//courses.lumenlearning.com' />
+<link rel='dns-prefetch' href='//use.typekit.net' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/courses.lumenlearning.com\/waymakercollegealgebra\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.8"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56760,9792,65039],[55358,56760,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='pressbooks/structure-css'  href='https://courses.lumenlearning.com/waymakercollegealgebra/wp-content/themes/pressbooks-book/dist/styles/structure.css?id=73555eac1f448b204588' type='text/css' media='screen, print' />
+<link rel='stylesheet' id='pressbooks/webfonts-css'  href='https://fonts.googleapis.com/css?family=Oswald|Open+Sans+Condensed:300,300italic&#038;subset=latin,cyrillic,greek,cyrillic-ext,greek-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='pressbooks/theme-css'  href='https://courses.lumenlearning.com/waymakercollegealgebra/wp-content/uploads/sites/896/pressbooks/css/style.css?ver=1559062672' type='text/css' media='screen, print' />
+<link rel='stylesheet' id='dashicons-css'  href='https://courses.lumenlearning.com/waymakercollegealgebra/wp-includes/css/dashicons.min.css?ver=4.9.8' type='text/css' media='all' />
+<link rel='stylesheet' id='pressbooks/a11y-css'  href='https://courses.lumenlearning.com/waymakercollegealgebra/wp-content/themes/pressbooks-book/dist/styles/a11y.css?id=67ce4802af40e4fea4f2' type='text/css' media='screen' />
+<script type='text/javascript' src='https://courses.lumenlearning.com/waymakercollegealgebra/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script async type='text/javascript' src='https://courses.lumenlearning.com/waymakercollegealgebra/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='https://courses.lumenlearning.com/waymakercollegealgebra/wp-content/themes/bombadil/assets/js/iframe-resizer.js?ver=4.9.8'></script>
+<script type='text/javascript' src='//use.typekit.net/mje6fya.js?ver=1.0.0'></script>
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js?ver=3.7.3'></script>
+<![endif]-->
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML.js&#038;delayStartupUntil=configured&#038;ver=4.9.8'></script>
+<script async type='text/javascript' src='https://courses.lumenlearning.com/waymakercollegealgebra/wp-content/themes/pressbooks-book/dist/scripts/toc.js?id=41dec06e39b599e9d22d'></script>
+<script async type='text/javascript' src='https://courses.lumenlearning.com/waymakercollegealgebra/wp-content/themes/pressbooks-book/dist/scripts/a11y.js?id=3faa829da7a4aa2b976a'></script>
+<link rel='https://api.w.org/' href='https://courses.lumenlearning.com/waymakercollegealgebra/wp-json/' />
+<link rel='prev' title='Evaluating and Solving Functions' href='https://courses.lumenlearning.com/waymakercollegealgebra/chapter/evaluate-and-solve-functions/' />
+<link rel='next' title='Summary: Characteristics of Functions and Their Graphs' href='https://courses.lumenlearning.com/waymakercollegealgebra/chapter/summary/' />
+<link rel="canonical" href="https://courses.lumenlearning.com/waymakercollegealgebra/chapter/identify-functions-using-graphs/" />
+<link rel='shortlink' href='https://courses.lumenlearning.com/waymakercollegealgebra/?p=966' />
+<link rel="alternate" type="application/json+oembed" href="https://courses.lumenlearning.com/waymakercollegealgebra/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcourses.lumenlearning.com%2Fwaymakercollegealgebra%2Fchapter%2Fidentify-functions-using-graphs%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://courses.lumenlearning.com/waymakercollegealgebra/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcourses.lumenlearning.com%2Fwaymakercollegealgebra%2Fchapter%2Fidentify-functions-using-graphs%2F&#038;format=xml" />
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-73352819-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<meta itemprop='author' content='Lumen Learning' id='author'>
+<meta itemprop='contributor' content='' id='contributor'>
+<meta itemprop='copyrightHolder' content='Lumen Learning' id='copyrightHolder'>
+<meta itemprop='editor' content='' id='editor'>
+<meta itemprop='image' content='https://courses.lumenlearning.com/waymakercollegealgebra/wp-content/uploads/sites/896/2017/11/CollegeAlgebra_Cover.jpg' id='image'>
+<meta itemprop='inLanguage' content='en' id='inLanguage'>
+<script>try{Typekit.load();}catch(e){}</script><script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+				TeX: { extensions: [ "cancel.js", "mhchem.js" ] },
+				tex2jax: {inlineMath: [ [ "[latex]", "[/latex]" ] ] }
+			});
+		</script>
+		<script type="text/javascript">
+			MathJax.Hub.Configured();
+		</script><style type="text/css">
+/* <![CDATA[ */
+img.latex { vertical-align: middle; border: none; background: none; }
+/* ]]> */
+</style>
+
+</head>
+<body class="singular chapter-template-default single single-chapter postid-966" id="identifyfunctionsusinggraphs" itemscope itemtype="http://schema.org/WebPage" itemref="about copyrightHolder copyrightYear inLanguage publisher" >
+
+		
+		<!-- table of contents -->
+		
+			<div class="nav-container">
+
+				<!-- skip to content -->
+				<div class="skip-to-content">
+					<a href="#content">Skip to main content</a>
+				</div>
+
+									<!-- nav bar -->
+					<nav role="navigation"  style="background-color: 0">
+						<!-- logo / branding -->
+						<div class="book-title-wrapper">
+							<div class="bombadil-logo"><a href="https://courses.lumenlearning.com/"><img src="https://courses.lumenlearning.com/waymakercollegealgebra/wp-content/themes/bombadil/assets/images/LumenOnDark-150x69.png" alt="Lumen" /></a></div>
+						<!-- Book Title -->
+							<h1 class="book-title">
+																	<a href="https://courses.lumenlearning.com/waymakercollegealgebra/" title="College Algebra" rel="home">College Algebra</a>
+															</h1>
+						</div>
+					</nav>
+
+											<div class="sub-nav">
+							<div class="sub-nav-wrapper">
+								<!-- page title -->
+																	<div class="author-wrap">
+										<h3>Module 5: Function Basics</h3>
+									</div> <!-- end .author-name -->
+								
+								<!-- search bar -->
+								<form role="search" method="get" id="searchform" class="searchform" action="https://courses.lumenlearning.com/waymakercollegealgebra/">
+				<div>
+					<label class="screen-reader-text" for="s">Search for:</label>
+					<input type="text" value="" name="s" id="s" />
+					<input type="submit" id="searchsubmit" value="Search" />
+				</div>
+			</form>							</div>
+						</div><!-- end sub-nav -->
+					
+							</div> <!-- end .nav-container -->
+
+	<div class="wrapper"><!-- for sitting footer at the bottom of the page -->
+			<div id="wrap">
+				<div id="content" role="main">
+
+		
+				<h2 class="entry-title">Identify Functions Using Graphs</h2>
+
+				<div id="post-966" class="standard post-966 chapter type-chapter status-publish hentry">
+
+					<div class="entry-content">
+											
+					<div class="textbox learning-objectives">
+<h3>Learning Objectives</h3>
+<ul>
+<li>Verify a function using the vertical line test</li>
+<li>Verify a one-to-one function with the horizontal line test</li>
+<li>Identify the graphs of the toolkit functions</li>
+</ul>
+</div>
+<p>As we have seen in examples above, we can represent a function using a graph. Graphs display many input-output pairs in a small space. The visual information they provide often makes relationships easier to understand. We typically construct graphs with the input values along the horizontal axis and the output values along the vertical axis.</p>
+<p>The most common graphs name the input value [latex]x[/latex] and the output value [latex]y[/latex], and we say [latex]y[/latex] is a function of [latex]x[/latex], or [latex]y=f\left(x\right)[/latex] when the function is named [latex]f[/latex]. The graph of the function is the set of all points [latex]\left(x,y\right)[/latex] in the plane that satisfies the equation [latex]y=f\left(x\right)[/latex]. If the function is defined for only a few input values, then the graph of the function is only a few points, where the <em>x</em>-coordinate of each point is an input value and the <em>y</em>-coordinate of each point is the corresponding output value. For example, the black dots on the graph in the graph below tell us that [latex]f\left(0\right)=2[/latex] and [latex]f\left(6\right)=1[/latex]. However, the set of all points [latex]\left(x,y\right)[/latex] satisfying [latex]y=f\left(x\right)[/latex] is a curve. The curve shown includes [latex]\left(0,2\right)[/latex] and [latex]\left(6,1\right)[/latex] because the curve passes through those points.</p>
+<div class="wp-nocaption aligncenter"><img class="aligncenter" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/896/2016/10/18191012/CNX_Precalc_Figure_01_01_0112.jpg" alt="Graph of a polynomial." width="731" height="442" /></div>
+<p>The <strong>vertical line test</strong> can be used to determine whether a graph represents a function. A vertical line includes all points with a particular [latex]x[/latex] value. The [latex]y[/latex] value of a point where a vertical line intersects a graph represents an output for that input [latex]x[/latex] value. If we can draw <em>any</em> vertical line that intersects a graph more than once, then the graph does <em>not</em> define a function because that [latex]x[/latex] value has more than one output. A function has only one output value for each input value.</p>
+<div class="wp-nocaption aligncenter"><img class="aligncenter" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/896/2016/10/18191014/CNX_Precalc_Figure_01_01_0122.jpg" alt="Three graphs visually showing what is and is not a function." width="975" height="271" /></div>
+<div class="textbox">
+<h3>How To: Given a graph, use the vertical line test to determine if the graph represents a function.</h3>
+<ol>
+<li>Inspect the graph to see if any vertical line drawn would intersect the curve more than once.</li>
+<li>If there is any such line, the graph does not represent a function.</li>
+<li>If no vertical line can intersect the curve more than once, the graph does represent a function.</li>
+</ol>
+</div>
+<div class="textbox exercises">
+<h3>Example: Applying the Vertical Line Test</h3>
+<p>Which of the graphs represent(s) a function [latex]y=f\left(x\right)?[/latex]</p>
+<div class="wp-nocaption aligncenter"><img class="aligncenter" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/896/2016/10/18191017/CNX_Precalc_Figure_01_01_013abc.jpg" alt="Graph of a polynomial." width="975" height="418" /></div>
+<div class="qa-wrapper" style="display: block"><span class="show-answer collapsed" style="cursor: pointer" data-target="q689864">Show Solution</span></p>
+<div id="q689864" class="hidden-answer" style="display: none">
+<p>If any vertical line intersects a graph more than once, the relation represented by the graph is not a function. Notice that any vertical line would pass through only one point of the two graphs shown in parts (a) and (b) of the graph above. From this we can conclude that these two graphs represent functions. The third graph does not represent a function because, at most <em>x</em>-values, a vertical line would intersect the graph at more than one point.</p>
+<div class="wp-nocaption aligncenter"><img class="aligncenter" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/896/2016/10/18191020/CNX_Precalc_Figure_01_01_016.jpg" alt="Graph of a circle." width="487" height="445" /></div>
+</div>
+</div>
+</div>
+<p><iframe width="500" height="281" src="https://www.youtube.com/embed/5Z8DaZPJLKY?feature=oembed&#038;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<div class="textbox key-takeaways">
+<h3>Try It</h3>
+<p>Does the graph below represent a function?</p>
+<div class="wp-nocaption aligncenter"><img class="aligncenter" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/896/2016/10/18191023/CNX_Precalc_Figure_01_01_017.jpg" alt="Graph of absolute value function." width="487" height="366" /></div>
+<div class="qa-wrapper" style="display: block"><span class="show-answer collapsed" style="cursor: pointer" data-target="q783855">Show Solution</span></p>
+<div id="q783855" class="hidden-answer" style="display: none">
+<p>Yes.</p>
+</div>
+</div>
+<p><iframe id="mom1" class="resizable" src="https://www.myopenmath.com/multiembedq.php?id=40676&amp;theme=oea&amp;iframe_resize_id=mom1" width="100%" height="650"></iframe></p>
+</div>
+<h2>The Horizontal Line Test</h2>
+<p>Once we have determined that a graph defines a function, an easy way to determine if it is a one-to-one function is to use the <strong>horizontal line test</strong>. Draw horizontal lines through the graph. A horizontal line includes all points with a particular [latex]y[/latex] value. The [latex]x[/latex] value of a point where a vertical line intersects a function represents the input for that output [latex]y[/latex] value. If we can draw <em>any</em> horizontal line that intersects a graph more than once, then the graph does <em>not</em> represent a function because that [latex]y[/latex] value has more than one input.</p>
+<div class="textbox">
+<h3>How To: Given a graph of a function, use the horizontal line test to determine if the graph represents a one-to-one function.</h3>
+<ol>
+<li>Inspect the graph to see if any horizontal line drawn would intersect the curve more than once.</li>
+<li>If there is any such line, the function is not one-to-one.</li>
+<li>If no horizontal line can intersect the curve more than once, the function is one-to-one.</li>
+</ol>
+</div>
+<div class="textbox exercises">
+<h3>Example: Applying the Horizontal Line Test</h3>
+<p>Consider the functions (a), and (b)shown in the graphs below.</p>
+<div class="wp-nocaption aligncenter"><img class="aligncenter" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/896/2016/10/18191017/CNX_Precalc_Figure_01_01_013abc.jpg" alt="Graph of a polynomial." width="975" height="418" /></div>
+<p>Are either of the functions one-to-one?</p>
+<div class="qa-wrapper" style="display: block"><span class="show-answer collapsed" style="cursor: pointer" data-target="q173050">Show Solution</span></p>
+<div id="q173050" class="hidden-answer" style="display: none">
+<p>The function in (a) is not one-to-one. The horizontal line shown below intersects the graph of the function at two points (and we can even find horizontal lines that intersect it at three points.)</p>
+<div class="wp-nocaption aligncenter"><img class="aligncenter" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/896/2016/10/18191025/CNX_Precalc_Figure_01_01_010.jpg" width="487" height="445" /></div>
+<p>The function in (b) is one-to-one. Any horizontal line will intersect a diagonal line at most once.</p>
+</div>
+</div>
+<p><iframe id="mom11" class="resizable" src="https://ohm.lumenlearning.com/multiembedq.php?id=111715&amp;theme=oea&amp;iframe_resize_id=mom11" width="100%" height="450"></iframe></p>
+</div>
+<p><iframe width="500" height="281" src="https://www.youtube.com/embed/tbSGdcSN8RE?feature=oembed&#038;rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<h2>Identifying Basic Toolkit Functions</h2>
+<p>In this text we explore functions—the shapes of their graphs, their unique characteristics, their algebraic formulas, and how to solve problems with them. When learning to read, we start with the alphabet. When learning to do arithmetic, we start with numbers. When working with functions, it is similarly helpful to have a base set of building-block elements. We call these our &#8220;toolkit functions,&#8221; which form a set of basic named functions for which we know the graph, formula, and special properties. Some of these functions are programmed to individual buttons on many calculators. For these definitions we will use [latex]x[/latex] as the input variable and [latex]y=f\left(x\right)[/latex] as the output variable.</p>
+<p>We will see these toolkit functions, combinations of toolkit functions, their graphs, and their transformations frequently throughout this book. It will be very helpful if we can recognize these toolkit functions and their features quickly by name, formula, graph, and basic table properties. The graphs and sample table values are included with each function shown below.</p>
+<table>
+<thead>
+<tr>
+<th colspan="3">Toolkit Functions</th>
+</tr>
+<tr>
+<th>Name</th>
+<th>Function</th>
+<th>Graph</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Constant</td>
+<td>[latex]f\left(x\right)=c[/latex], where [latex]c[/latex] is a constant</td>
+<td><img class="alignnone" src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/896/2016/10/18191028/CNX_Precalc_Figure_01_01_018n.jpg" alt="Graph of a constant function." width="517" height="319" /></td>
+</tr>
+<tr>
+<td>Identity</td>
+<td>[latex]f\left(x\right)=x[/latex]</td>
+<td><img src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/896/2016/10/18191030/CNX_Precalc_Figure_01_01_019n.jpg" alt="Graph of a straight line." /></td>
+</tr>
+<tr>
+<td>Absolute value</td>
+<td>[latex]f\left(x\right)=|x|[/latex]</td>
+<td><img src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/896/2016/10/18191034/CNX_Precalc_Figure_01_01_020n.jpg" alt="Graph of absolute function." /></td>
+</tr>
+<tr>
+<td>Quadratic</td>
+<td>[latex]f\left(x\right)={x}^{2}[/latex]</td>
+<td><img src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/896/2016/10/18191037/CNX_Precalc_Figure_01_01_021n.jpg" alt="Graph of a parabola." /></td>
+</tr>
+<tr>
+<td>Cubic</td>
+<td>[latex]f\left(x\right)={x}^{3}[/latex]</td>
+<td><img src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/896/2016/10/18191039/CNX_Precalc_Figure_01_01_022n.jpg" alt="Graph of f(x) = x^3." /></td>
+</tr>
+<tr>
+<td>Reciprocal/ Rational</td>
+<td>[latex]f\left(x\right)=\frac{1}{x}[/latex]</td>
+<td><img src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/896/2016/10/18191042/CNX_Precalc_Figure_01_01_023n.jpg" alt="Graph of f(x)=1/x." /></td>
+</tr>
+<tr>
+<td>Reciprocal / Rational squared</td>
+<td>[latex]f\left(x\right)=\frac{1}{{x}^{2}}[/latex]</td>
+<td><img src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/896/2016/10/18191044/CNX_Precalc_Figure_01_01_024n.jpg" alt="Graph of f(x)=1/x^2." /></td>
+</tr>
+<tr>
+<td>Square root</td>
+<td>[latex]f\left(x\right)=\sqrt{x}[/latex]</td>
+<td><img src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/896/2016/10/18191047/CNX_Precalc_Figure_01_01_025n.jpg" alt="Graph of f(x)=sqrt(x)." /></td>
+</tr>
+<tr>
+<td>Cube root</td>
+<td>[latex]f\left(x\right)=\sqrt[3]{x}[/latex]</td>
+<td><img src="https://s3-us-west-2.amazonaws.com/courses-images/wp-content/uploads/sites/896/2016/10/18191050/CNX_Precalc_Figure_01_01_026n.jpg" alt="Graph of f(x)=x^(1/3)." /></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<div class="textbox key-takeaways">
+<h3>Try It</h3>
+<p><iframe id="mom15" class="resizable" src="https://www.myopenmath.com/multiembedq.php?id=111722&amp;theme=oea&amp;iframe_resize_id=mom15" width="100%" height="650"></iframe></p>
+</div>
+<div class="textbox key-takeaways">
+<h3>Try It</h3>
+<p>In this exercise, you will graph the toolkit functions using Desmos.</p>
+<ol>
+<li>Graph each toolkit function using function notation.</li>
+<li>Make a table of values that references the function and includes at least the interval [-5,5].</li>
+</ol>
+</div>
+<p>&nbsp;</p>
+
+					</div><!-- .entry-content -->
+				</div><!-- #post-## -->
+
+                  <!-- CITATIONS AND ATTRIBUTIONS -->
+          <section class="citations-section" role="contentinfo">
+            <div class="post-citations sidebar">
+              <div role="button" aria-pressed="false" id="citation-header-966" class="collapsed license-attribution-dropdown">Licenses and Attributions</div>
+              <div id="citation-list-966" style="display:none;">
+                <div class="licensing"><div class="license-attribution-dropdown-subheading">CC licensed content, Original</div><ul class="citation-list"><li>Question ID 111715, 11722. <strong>Provided by</strong>: Lumen Learning. <strong>License</strong>: <em><a target="_blank" rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY: Attribution</a></em>. <strong>License Terms</strong>: IMathAS Community License CC-BY + GPL</li><li>Revision and Adaptation. <strong>Provided by</strong>: Lumen Learning. <strong>License</strong>: <em><a target="_blank" rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY: Attribution</a></em></li><li>Vertical Line Test. <strong>Authored by</strong>: Lumen Learning. <strong>Located at</strong>: <a target="_blank" href="https://www.desmos.com/calculator/dcq8twow2q">https://www.desmos.com/calculator/dcq8twow2q</a>. <strong>License</strong>: <em><a target="_blank" rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY: Attribution</a></em></li></ul><div class="license-attribution-dropdown-subheading">CC licensed content, Shared previously</div><ul class="citation-list"><li>College Algebra. <strong>Authored by</strong>: Abramson, Jay et al.. <strong>Provided by</strong>: OpenStax. <strong>Located at</strong>: <a target="_blank" href="http://cnx.org/contents/9b08c294-057f-4201-9f48-5d6ad992740d@5.2">http://cnx.org/contents/9b08c294-057f-4201-9f48-5d6ad992740d@5.2</a>. <strong>License</strong>: <em><a target="_blank" rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY: Attribution</a></em>. <strong>License Terms</strong>: Download for free at http://cnx.org/contents/9b08c294-057f-4201-9f48-5d6ad992740d@5.2</li><li>Question ID 40676. <strong>Authored by</strong>: Jenck, Michael. <strong>License</strong>: <em><a target="_blank" rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY: Attribution</a></em>. <strong>License Terms</strong>: IMathAS Community License CC-BY + GPL</li></ul></div>              </div>
+            </div>
+          </section>
+        
+
+									<!-- edit page button -->
+									
+				<!-- page nav buttons -->
+				<nav class="bottom-nav-buttons" role="navigation">
+					<a class="post-nav-button" id="prev" href="https://courses.lumenlearning.com/waymakercollegealgebra/chapter/evaluate-and-solve-functions/">
+				Previous			</a>
+		
+					<a class="post-nav-button" id="next" href="https://courses.lumenlearning.com/waymakercollegealgebra/chapter/summary/">
+				Next			</a>
+			</nav>
+			</div><!-- #content -->
+
+			
+	<!-- This does nothing and exists only to block sidebar.php of the Luther theme from rendering. -->
+
+	</div><!-- #wrap -->
+	<div class="push"></div>
+
+	</div><!-- .wrapper for sitting footer at the bottom of the page -->
+
+<div class="footer">
+	<div class="inner">
+		<!-- logo options -->
+									<img class="lumen-footer-logo" src="https://courses.lumenlearning.com/waymakercollegealgebra/wp-content/themes/bombadil/assets/images/FooterLumenWaymaker.png" alt="Footer Logo Lumen Waymaker" />
+						</div><!-- #inner -->
+</div><!-- #footer -->
+
+<script type='text/javascript' src='https://courses.lumenlearning.com/waymakercollegealgebra/wp-content/themes/bombadil/assets/js/audio-behavior.js?ver=4.9.8'></script>
+<script type='text/javascript' src='https://courses.lumenlearning.com/waymakercollegealgebra/wp-content/themes/bombadil/assets/js/hide-answer.js?ver=4.9.8'></script>
+<script type='text/javascript' src='https://courses.lumenlearning.com/waymakercollegealgebra/wp-content/themes/bombadil/assets/js/lti-buttons.js?ver=4.9.8'></script>
+<script async type='text/javascript' src='https://courses.lumenlearning.com/waymakercollegealgebra/wp-content/themes/pressbooks-book/dist/scripts/keyboard-nav.js?id=5530f96084c639f108ac'></script>
+<script type='text/javascript' src='https://courses.lumenlearning.com/waymakercollegealgebra/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thePost = {"id":"966"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://courses.lumenlearning.com/waymakercollegealgebra/wp-content/themes/bombadil/assets/js/attributions.js?ver=4.9.8'></script>
+<script>if (typeof sendIframeResize === "function") { sendIframeResize(); }</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"0d4d84695b","applicationID":"12680714","transactionName":"ZQBaNkRZXEdZBkcLWlxKeQFCUV1aFxZaDFJeAA==","queueTime":0,"applicationTime":526,"atts":"SUdZQAxDT0k=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
